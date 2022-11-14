@@ -1,0 +1,74 @@
+VUE js tutorial
+
+How to install vue is 3 in laravel 9
+1. Composer create-project laravel/laravel vue_laravel
+2. Cd vue_laravel
+3.  npm install vue@next vue-loader@next
+4. npm i @vitejs/plugin-vue
+5. npm install && npm run dev
+6. import and mount vue 3 in resources/js/app.js
+also create folder (components) inside resources/js
+
+app.js
+
+import {createApp} from ‘vue’;
+import app from ‘./components/app.vue’;
+
+
+createApp(app). mount(‘#app’)
+
+7. create a file inside components/app.vue
+
+app.vue
+
+<template>
+<h1>
+Vue js with laravel 9
+
+</h1>
+</template>
+
+
+<script>
+
+</script>
+
+
+<style>
+
+</style>
+
+
+8. next add plugin vue () in vite.config. vite.config.js
+import vue from ‘@vitejs/plugin-vue’;
+plugins:[
+vue (),
+…..
+….
+
+9. next you need to define root in blade file and @vite directives
+
+welcome.blade.php
+
+ <head>
+  @vite('resources/js/app.js')
+</head>
+<body>
+        <div id="app"></div>
+    </body>
+
+
+
+10. you need to run npm run build or npm run dev command to create asset vue file
+(open two command line prompt)
+1st cmd write the following command
+npm run dev
+
+2nd cmd write the following command
+
+php artisan serve
+
+
+
+
+
